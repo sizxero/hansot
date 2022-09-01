@@ -5,3 +5,19 @@
  
 ## 📂 Directory 
 
+
+    ㄴ public
+        ㄴ bootstrap
+            ㄴ js
+            ㄴ css
+        ㄴ styles (custom)
+        ㄴ js (logic)
+        ㄴ index.html
+        
+    ㄴ src
+        ㄴ components
+            ㄴ common
+        ㄴ pages
+        ㄴ redux
+        ㄴ App.js
+        ㄴ index.js
