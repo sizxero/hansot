@@ -6,10 +6,10 @@ const LinkBanner = (props) => {
             <Card>
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>
-                    <Card.Title>{props.title}</Card.Title>
-                    <Card.Text>{props.content}</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Title><h3>{props.title}</h3></Card.Title>
+                    <span className="sc_txt">{props.linktitle}</span>
                 </Card.Body>
+                <div className="bottomLine"></div>
             </Card>
         </Col>
     );

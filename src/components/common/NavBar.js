@@ -3,17 +3,31 @@ const NavBar = () => {
     return (
         <>
             <Navbar bg="light" expand="lg" className="NavBar">
-                <Navbar.Brand href="#home">한솥</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">                    
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">BRAND</Nav.Link>
-                    <Nav.Link href="#link">ESG</Nav.Link>
+                <Navbar.Brand href="#home">
+                <img
+                src="https://www.hsd.co.kr/assets/images/common/h1_logo.png"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+                />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="NavBarNav" />
+                <Navbar.Collapse id="NavBarNav">                    
+                <Nav className="NavBarNav1">
+                    <Nav.Link href="#home">
+                        BRAND
+                        <Nav className="NavBarNav2" style={{"display": "none"}}>
+                            <Nav.Link href="">asdf</Nav.Link>
+                            <Nav.Link href="">asdf</Nav.Link>
+                            <Nav.Link href="">asdf</Nav.Link>
+                            <Nav.Link href="">asdf</Nav.Link>
+                        </Nav>
+                    </Nav.Link>
+                    <Nav.Link href="#home">ESG</Nav.Link>
                     <Nav.Link href="#home">MENU</Nav.Link>
-                    <Nav.Link href="#link">STORE</Nav.Link>
+                    <Nav.Link href="#home">STORE</Nav.Link>
                     <Nav.Link href="#home">EVENT</Nav.Link>
-                    <Nav.Link href="#link">FRANCHISE</Nav.Link>
-                    <Nav.Link href="#link">HANSOT</Nav.Link>
+                    <Nav.Link href="#home">FRANCHISE</Nav.Link>
+                    <Nav.Link href="#home">HANSOT</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>

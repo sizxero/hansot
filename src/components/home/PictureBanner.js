@@ -1,14 +1,23 @@
-import { Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { TextBanner } from '.';
 
 const PictureBanner = (props) => {
     return (
-        <Col className="PictureBanner">
-            <img src={props.img} />
-            <TextBanner 
-            title={props.title}
-            content={props.content}/>
-        </Col>
+        <>
+        <Container className="PBContainer">
+            <Row className="PictureBanner">
+            <Col md={{ span: 4, offset: 8 }}>
+                <TextBanner 
+                style={props.style}
+                title={props.title}
+                content={props.content}
+                type={props.type} 
+                linktitle={props.linktitle}/>
+            </Col>
+            <div className="bottomLine"></div>
+            </Row>
+        </Container>
+        </>
     );
 }
 
