@@ -192,3 +192,16 @@ a.custombutton:hover {
     background-color: white;
     color: black;
 }
+
+/* 로그인 페이지 */
+div.Login {
+    width: 100%;
+    padding: 250px 0 100px 0;
+    height: 100%;
+    background-color: lightgray;
+}
+
+div.Login .row div {
+    background-color: white;
+    padding: 30px;
+}
