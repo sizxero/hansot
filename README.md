@@ -35,5 +35,9 @@
             ㄴ home
         ㄴ pages
         ㄴ redux
+            ㄴ actions
+            ㄴ reducers
+            ㄴ RootReducer.js
+            ㄴ Store.js
         ㄴ App.js
         ㄴ index.js
