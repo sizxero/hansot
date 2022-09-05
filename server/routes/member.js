@@ -8,12 +8,16 @@ router.get('/id/:id', async (req, res) => {
     res.send({dupl: result});
 });
 
-router.post('/login', (req, res) => {
-
+router.post('/signup', async (req, res) => {
+    let data = req.body;
+    let result = await MemberDAO.signUp(data);
+    res.send({signup: result});
 });
 
-router.post('/signup', (req, res) => {
-
+router.post('/login', async(req, res) => {
+    let data = req.body;
+    let result = await MemberDAO.login(data);
+    res.send({login: result});
 });
 
 module.exports = router;

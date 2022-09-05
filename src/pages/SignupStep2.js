@@ -31,7 +31,6 @@ const SignupStep2 = () => {
                 <Row>
                     <Col sm md id="signup-section">
                         <h1>회원가입</h1>
-                        <form action="" method="post" className="signupForm">
                         <table>
                             <tr>
                                 <th>아이디</th>
@@ -67,8 +66,7 @@ const SignupStep2 = () => {
                            <input type="button" 
                            class="btn btn-outline-warning" 
                            value="SIGN UP"
-                           onClick={(e)=> dispatch(Action.clickSignup())}></input>
-                        </form>
+                           onClick={()=> MemberAPI.signup(state)}></input>
                     </Col>
                 </Row>
             </Container>

@@ -1,6 +1,17 @@
+import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { useDispatch, useSelector } from "react-redux";
+import * as Action from "../redux/Action";
+import MemberAPI from "../client/api/MemberAPI";
 
 const Login = () => {
+    let dispatch = useDispatch();
+    let state = useSelector((state) => state.loginReducer);
+
+    useEffect(() => {
+        console.log(state);
+    }, [state]);
+
     return (
         <div className="Login">
             <Container>
@@ -10,10 +21,12 @@ const Login = () => {
                         <form action="" method="post" className="loginForm">
                             <div className="loginWrapper">
                                 <div className="loginInputArea">
-                                    <input type="text" placeholder="ID" />
-                                    <input type="password" placeholder="PW" />
+                                    <input type="text" placeholder="ID" onChange={(e) => dispatch(Action.writeIdLogin(e.target.value))}/>
+                                    <input type="password" placeholder="PW" onChange={(e) => dispatch(Action.writePwLogin(e.target.value))}/>
                                 </div>
-                                <input type="button" className="btn btn-warning" value="로그인" />
+                                <input type="button" 
+                                className="btn btn-warning" value="로그인"
+                                onClick={() => MemberAPI.login(state)} />
                             </div>
                         </form>
                     </Col>

@@ -6,8 +6,7 @@ const initialState = {
     pwre: '',
     name: '',
     email: '',
-    phone: '',
-    samepwchk: false
+    phone: ''
 };
 
 const reducers = (state=initialState, action) => {
@@ -15,6 +14,7 @@ const reducers = (state=initialState, action) => {
 
     switch (type) {
         case Action.SIGNUP: {
+            
             return state
         }
         case Action.WRITE_ID: {

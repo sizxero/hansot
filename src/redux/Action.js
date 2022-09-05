@@ -1,7 +1,10 @@
 // Action type
 export const SIGNUP = 'SIGNUP';
+export const LOGIN = 'LOGIN';
 export const WRITE_ID = 'WRITE_ID';
 export const WRITE_PW = 'WRITE_PW';
+export const WRITE_ID_LOGIN = 'WRITE_ID_LOGIN';
+export const WRITE_PW_LOGIN = 'WRITE_PW_LOGIN';
 export const WRITE_PW_RE = 'WRITE_PW_RE';
 export const WRITE_NAME = 'WRITE_NAME';
 export const WRITE_EMAIL = 'WRITE_EMAIL';
@@ -12,6 +15,26 @@ export const SAME_PW_CHECK = 'SAME_PW_CHECK';
 export const clickSignup = () => {
     return {
         type: SIGNUP,
+    }
+}
+
+export const clickLogin = () => {
+    return {
+        type: LOGIN,
+    }
+}
+
+export const writeIdLogin = (id) => {
+    return {
+        type: WRITE_ID_LOGIN,
+        id: id,
+    }
+}
+
+export const writePwLogin= (pw) => {
+    return {
+        type: WRITE_PW_LOGIN,
+        pw: pw,
     }
 }
 
