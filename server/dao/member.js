@@ -12,8 +12,7 @@ oracledb.initOracleClient({
     libDir: process.env.ORACLE_LIB_DIR
 });
 
-
-module.exports = {
+const DAO = {
     isExistId: async(id) => {
         let conn = await oracledb.getConnection(dbConfig);
         let binds = {};
@@ -27,3 +26,5 @@ module.exports = {
         return result !== 0;
     }
 }
+
+module.exports = DAO;

@@ -3,12 +3,12 @@ import { Header, Footer } from "./components/common";
 import { Home, Login, SignupStep1, SignupStep2 } from "./pages";
 import { Provider } from 'react-redux';
 import store from './redux/Store';
-import reducers from './redux/Reducer';
+import rootReducer from './redux/RootReducer';
 
 const App = () => {
     return (
         <>
-        <Provider store={store(reducers)}>
+        <Provider store={store(rootReducer)}>
         <BrowserRouter>
             <Header />
             <Routes>
