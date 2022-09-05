@@ -6,17 +6,33 @@
 ## 📂 Directory 
 
 
+    ㄴ DB assets
+        ㄴ DDL (DB 구축용)
+            ㄴ CREATE.txt
+            ㄴ DELETE.txt
+        ㄴ ALL DATA.xlsx (data import용)
+        ㄴ ERD.jpg
+
     ㄴ public
         ㄴ bootstrap
             ㄴ js
             ㄴ css
+        ㄴ images
         ㄴ styles (custom)
-        ㄴ js (logic)
         ㄴ index.html
-        
+
+    ㄴ server
+        ㄴ dao
+        ㄴ routes
+        ㄴ server.js (express server)
+
     ㄴ src
+        ㄴ client
+            ㄴ api
+            ㄴ Cookie.js
         ㄴ components
             ㄴ common
+            ㄴ home
         ㄴ pages
         ㄴ redux
         ㄴ App.js
