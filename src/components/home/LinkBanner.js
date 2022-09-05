@@ -2,8 +2,7 @@ import { Col, Card, Button } from "react-bootstrap";
 
 const LinkBanner = (props) => {
     return (
-        <Col className="LinkBanner">
-            <Card>
+            <Card className="LinkBanner">
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title><h3>{props.title}</h3></Card.Title>
@@ -11,7 +10,6 @@ const LinkBanner = (props) => {
                 </Card.Body>
                 <div className="bottomLine"></div>
             </Card>
-        </Col>
     );
 }
 

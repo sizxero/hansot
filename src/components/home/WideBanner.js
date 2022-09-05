@@ -6,7 +6,7 @@ const WideBanner = (props) => {
         <div className="WideBanner">
             <Container>
                 <Row>
-                    <Col sm={4}>
+                    <Col sm={12} md={4}>
                         <TextBanner
                         style={props.style}
                         title={props.title}

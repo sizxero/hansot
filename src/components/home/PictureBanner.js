@@ -5,8 +5,9 @@ const PictureBanner = (props) => {
     return (
         <>
         <Container className="PBContainer">
-            <Row className="PictureBanner">
-            <Col md={{ span: 4, offset: 8 }}>
+            <Row>
+            <Col className="PictureBanner" md={8} sm={12}></Col>    
+            <Col md={4} sm={12}>
                 <TextBanner 
                 style={props.style}
                 title={props.title}

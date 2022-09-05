@@ -2,8 +2,7 @@ import { Col, Button } from "react-bootstrap";
 
 const TextBanner = (props) => {
     return (
-        <Col className="TextBanner" style={props.style}>
-            <div className="contentWrapper">
+        <div className="contentWrapper TextBanner" style={props.style}>
             <h2>{props.title}</h2>
             { props.style.color === 'white' ? 
             <div className="middleLine white"/>
@@ -17,8 +16,7 @@ const TextBanner = (props) => {
             <a className="custombutton" href="#">{props.linktitle}</a> : 
             <></>
             }
-            </div>
-        </Col>
+        </div>
     );
 }
 
