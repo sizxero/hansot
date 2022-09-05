@@ -194,14 +194,49 @@ a.custombutton:hover {
 }
 
 /* 로그인 페이지 */
-div.Login {
+div.Login, div.Signup {
     width: 100%;
     padding: 250px 0 100px 0;
     height: 100%;
     background-color: lightgray;
 }
 
-div.Login .row div {
+div.Login .row div.col-sm {
     background-color: white;
     padding: 30px;
+}
+
+div.loginWrapper {
+    display: flex;
+}
+
+div.loginInputArea {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+div.Signup .row {
+    background-color: white;
+}
+
+table {
+    width: 700px;
+    text-align: center;
+}
+input {
+    margin: 5px 0;
+}
+tr input[type=text], [type=password], [type=file] {
+    height: 40px;
+    width: 300px;
+}
+input[type=submit] {
+    width: 350px;
+}
+tr > td:nth-child(2) > input{
+    width: 100%;
+}
+tr > td:nth-child(3){
+    text-align: left;
 }
