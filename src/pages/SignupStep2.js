@@ -1,6 +1,12 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import MemberAPI from "../client/api/MemberAPI";
+import {useState} from 'react';
 
 const SignupStep2 = () => {
+
+    const [inputId, setInputId] = useState('');
+    let [inputPw, setInputPw] = useState('');
+
     return (
         <div className="Signup">
             <Container>
@@ -11,8 +17,8 @@ const SignupStep2 = () => {
                         <table>
                             <tr>
                                 <th>아이디</th>
-                                <td><input type="text" id="id" name="id" /></td>
-                                <td><input type="button" class="btn btn-warning" value="중복 확인" onclick="duplIdCheck()" /></td>
+                                <td><input type="text" id="id" name="id" value={inputId} onChange={(e) => setInputId(e.target.value)}/></td>
+                                <td><input type="button" class="btn btn-warning" value="중복 확인" onClick={(e) => MemberAPI.duplId(inputId) } /></td>
                             </tr>
                             <tr>
                                 <th>비밀번호</th>
