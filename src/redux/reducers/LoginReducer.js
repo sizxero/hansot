@@ -1,4 +1,4 @@
-import * as Action from './Action';
+import * as Action from '../actions/MemberAction';
 
 const initialState = {
     id: '',
