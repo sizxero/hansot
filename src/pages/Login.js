@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
-import * as Action from "../redux/Action";
+import * as Action from "../redux/actions/MemberAction";
 import MemberAPI from "../client/api/MemberAPI";
 
 const Login = () => {
