@@ -3,7 +3,7 @@ const NavBar = () => {
     return (
         <>
             <Navbar bg="light" expand="lg" className="NavBar">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                 <img
                 src="https://www.hsd.co.kr/assets/images/common/h1_logo.png"
                 className="d-inline-block align-top"
@@ -13,7 +13,7 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="NavBarNav" />
                 <Navbar.Collapse id="NavBarNav">                    
                 <Nav className="NavBarNav1">
-                    <Nav.Link href="#home">
+                    <Nav.Link href="#">
                         BRAND
                         <Nav className="NavBarNav2" style={{"display": "none"}}>
                             <Nav.Link href="">asdf</Nav.Link>

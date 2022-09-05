@@ -1,6 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 
-const Signup = () => {
+const SignupStep2 = () => {
     return (
         <div className="Signup">
             <Container>
@@ -69,4 +69,4 @@ const Signup = () => {
     );
 }
 
-export default Signup;
+export default SignupStep2;
