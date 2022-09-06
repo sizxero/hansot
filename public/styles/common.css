@@ -194,7 +194,7 @@ a.custombutton:hover {
 }
 
 /* 로그인 페이지 */
-div.Login, div.Signup {
+div.Login, div.Signup, div.Menu, div.MenuDetail, div.MyPage, div.SearchStore {
     width: 100%;
     padding: 250px 0 100px 0;
     height: 100%;
