@@ -1,7 +1,8 @@
 
-import { AdCarousel, LinkBanner, PictureBanner, TextBanner, WideBanner } from "../components/home";
+import { AdCarousel, LinkBanner, TextBanner, WideBanner } from "../components/home";
 import { Container, Row, Col } from "react-bootstrap";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -73,13 +74,25 @@ const Home = () => {
                     type="button"
                     linktitle="브랜드 철학"/>
             </div>
-            <PictureBanner
-            style={{'backgroundColor': 'lightgray'}}
-            title="식재료 앞에서는 한없이 까탈스럽습니다"
-            content="맑고 깨끗한 자연 환경속에서 재배된 식재료가 아니면 한솥이 될 수 없습니다.
-            모든 식재료는 고객분들이 안심하고 드실 수 있도록 엄격한 기준 아래 선별됩니다."
-            type="link" 
-            linktitle="식재료 이야기"/>
+            <Link to="#" className="PictureBanner">
+            <Container className="PictureBannerWrapper">
+                <Row>
+                    <Col sm={12} md={8} className="BannerPicture px-0">
+                        <img width="100%" src="https://www.hsd.co.kr/assets/images/main/main_img_05.jpg" alt="" />
+                    </Col>
+                    <Col sm={12} md={4} className="BannerText px-0">
+                    <TextBanner
+                    style={{'backgroundColor': 'lightgray'}}
+                    title="식재료 앞에서는 한없이 까탈스럽습니다"
+                    content="맑고 깨끗한 자연 환경속에서 재배된 식재료가 아니면 한솥이 될 수 없습니다.
+                    모든 식재료는 고객분들이 안심하고 드실 수 있도록 엄격한 기준 아래 선별됩니다."
+                    type="link" 
+                    linktitle="식재료 이야기"/>
+                    </Col>
+                    <div className="bottomLine"></div>
+                </Row>
+            </Container>
+            </Link>
         </>
     );
 }

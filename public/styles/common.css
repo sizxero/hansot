@@ -98,7 +98,7 @@ footer.Footer p {
 }
 
 .row {
-    height: 600px;
+    /* height: 600px; */
     margin: 30px 0;
 }
 
@@ -138,15 +138,10 @@ div.WideBanner {
 .WideBannerWrapper .row {
     margin-top: 0;
 }
+
 .WideBannerWrapper .TextBanner {
     height: 600px;
     pointer-events: auto;
-}
-
-div.PictureBanner {
-    background-image: url(https://www.hsd.co.kr/assets/images/main/main_img_05.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .Banners .row .card{
@@ -156,12 +151,6 @@ div.PictureBanner {
 
 .WideBanner .row {
     margin: 0;
-}
-
-
-.PictureBanner .TextBanner {
-    height: 600px;
-    margin-right: -12px;
 }
 
 div.middleLine {
@@ -223,18 +212,41 @@ a.custombutton:hover {
     color: black;
 }
 
-a.LinkBanner:hover div.bottomLine{
+.PictureBanner {
+    display: flex;
+    justify-content: center;
+}
+
+a.LinkBanner:hover div.bottomLine,
+a.PictureBanner:hover div.bottomLine {
     background-color: #f2c000;
 }
 
-a.LinkBanner:hover span.sc_txt::before {
+a.LinkBanner:hover span.sc_txt::before,
+a.PictureBanner:hover span.sc_txt::before {
     background-position: -20px 0;
 }
 
-a.LinkBanner:hover span.sc_txt {
+a.LinkBanner:hover span.sc_txt, a.PictureBanner:hover span.sc_txt
+, a.PictureBanner:hover p{
     font-weight: normal;
 }
 
+.PictureBannerWrapper {
+    margin: 0;
+}
+
+.BannerPicture {
+    height: 100%;
+}
+
+.BannerText .TextBanner {
+    height: 100%;
+}
+
+.TextBanner {
+    height: 100%;
+}
 /* 로그인 페이지 */
 div.Login, div.Signup, div.Menu, div.MenuDetail, div.MyPage, div.SearchStore {
     width: 100%;
