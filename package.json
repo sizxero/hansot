@@ -12,6 +12,7 @@
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "oracledb": "^5.4.0",
+    "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-cookie": "^4.1.1",
