@@ -216,7 +216,7 @@ div.loginInputArea {
     padding: 0;
 }
 
-div.Signup .row {
+div.Signup .row, div.Menu .row {
     background-color: white;
 }
 
@@ -239,4 +239,13 @@ tr > td:nth-child(2) > input{
 }
 tr > td:nth-child(3){
     text-align: left;
+}
+
+/* 메뉴 */
+div.Menu div.thumb {
+    height: 105px;
+}
+
+div.Menu div.col-md-4, div.Menu div.col-md-8 {
+    background-color: lightgray;
 }
