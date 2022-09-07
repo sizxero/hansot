@@ -1,8 +1,9 @@
 import { Col, Card, Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const LinkBanner = (props) => {
     return (
-            <Card className="LinkBanner">
+        <Link to={props.link} className="LinkBanner">
+            <Card>
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title><h3>{props.title}</h3></Card.Title>
@@ -10,6 +11,7 @@ const LinkBanner = (props) => {
                 </Card.Body>
                 <div className="bottomLine"></div>
             </Card>
+        </Link>
     );
 }
 

@@ -1,5 +1,5 @@
 import { Col, Button } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const TextBanner = (props) => {
     return (
         <div className="contentWrapper TextBanner" style={props.style}>
@@ -13,7 +13,7 @@ const TextBanner = (props) => {
             <></>
             }
             { props.type === 'button' ?
-            <a className="custombutton" href="#">{props.linktitle}</a> : 
+            <Link className="custombutton" to="#">{props.linktitle}</Link> : 
             <></>
             }
         </div>

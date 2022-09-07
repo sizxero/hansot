@@ -1,7 +1,23 @@
 
 import { AdCarousel, LinkBanner, PictureBanner, TextBanner, WideBanner } from "../components/home";
 import { Container, Row, Col } from "react-bootstrap";
+import { useEffect } from "react";
+
 const Home = () => {
+
+    useEffect(() => {
+        let bg = document.querySelector(".WideBanner");
+        console.log('ele', bg);
+        bg.addEventListener("mouseenter", (event) => {
+            event.target.classList.add("on");
+            console.log("mouseenter");
+          });
+          bg.addEventListener("mouseleave", (event) => {
+            event.target.classList.remove("on");
+            console.log("mouseleave");
+          });
+    });
+
     return (
         <>
             <AdCarousel />
@@ -11,13 +27,15 @@ const Home = () => {
                     <LinkBanner
                     img="https://www.hsd.co.kr/assets/images/main/main_img_01.jpg"
                     title="가격 이상의 가치가 담긴 한솥의 다양한 메뉴들을 확인해 보세요"
-                    linktitle="한솥 메뉴" />
+                    linktitle="한솥 메뉴"
+                    link="/menu" />
                     </Col>
                     <Col>
                     <LinkBanner
                     img="https://www.hsd.co.kr/assets/images/main/main_img_02.jpg"
                     title="갓 지은 한끼가 기다리고 있는 가까운 한솥 매장을 찾아보세요"
-                    linktitle="주변점포찾기" />
+                    linktitle="주변점포찾기"
+                    link="/store" />
                     </Col>
                 </Row>
                 <Row>
@@ -33,17 +51,19 @@ const Home = () => {
                     <LinkBanner
                     img="https://www.hsd.co.kr/assets/images/main/main_img_03.jpg"
                     title="한솥은 언제나 고객과 점주님들의 이익을 먼저 생각합니다"
-                    linktitle="Why 한솥 가맹점" />
+                    linktitle="Why 한솥 가맹점"
+                    link="#" />
                     </Col>
                     <Col md sm={6}>
                     <LinkBanner
                     img="https://www.hsd.co.kr/assets/images/main/main_img_04.jpg"
                     title="한솥과 함께하는 가맹점주들의 성공 스토리입니다" 
-                    linktitle="성공수기"/>
+                    linktitle="성공수기"
+                    link="#"/>
                     </Col>
                 </Row>
             </Container>
-            <Row>
+            <Row className="WideBannerWrapper">
                     <WideBanner
                     style={{'backgroundColor': 'black', 'color': 'white', 'opacity': '0.8'}}
                     title="든든한 솥밥을 위해 한솥이 지키고, 키워가는 것들"
