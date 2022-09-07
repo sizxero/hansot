@@ -10,15 +10,16 @@ const MenuNav = () => {
   let dispatch = useDispatch();
   let state = useSelector((state) => state.menuReducer);
   
-  const getCtg = async() => {
+  const getInitData = async() => {
     dispatch(Action.dispatchCategories(await MenuAPI.findAllCategories().then(x=> x)));
     dispatch(Action.dispatchMainCategories(await MenuAPI.findMainCategories().then(x=> x)));
+    dispatch(Action.dispatchAllMenu(await MenuAPI.findAllMenu().then(x=> x)));
   }
 
   const getSubCtgLink = (sno) => `/menu?ctg=${sno}`;
 
   useEffect(() => {
-    getCtg();
+    getInitData();
   }, []);
 
   return (

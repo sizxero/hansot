@@ -17,7 +17,7 @@ const Menu = () => {
     
       useEffect(() => {
         getCtg();
-      }, []);
+      }, [query]);
     return (
         <div className="Menu">
             <Container>

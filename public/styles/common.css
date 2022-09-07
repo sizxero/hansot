@@ -216,7 +216,7 @@ div.loginInputArea {
     padding: 0;
 }
 
-div.Signup .row, div.Menu .row {
+div.Signup .row, div.Menu .row, div.MenuDetailWapper {
     background-color: white;
 }
 
@@ -250,6 +250,4 @@ div.Menu div.col-md-4, div.Menu div.col-md-8 {
     background-color: lightgray;
 }
 
-/* div.MenuCard {
-    width: 300px;
-} */
+/* 메뉴디테일 */

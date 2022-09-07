@@ -29,6 +29,7 @@ const MenuCards = (props) => {
             {state.ctgMenu.map((menu, idx) => 
                 <Col md={4} sm={6}>
                 <MenuCard
+                no={menu.MN_NO}
                 img={menu.MN_IMG}
                 title={menu.MN_NAME}
                 price={menu.MN_PRICE}
