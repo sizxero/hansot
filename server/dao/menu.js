@@ -47,6 +47,66 @@ const DAO = {
         let result =  sql.rows;
         await conn.close();
         return result;
+    },
+
+    findAllMenu: async() => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select * from menu`, binds, options);
+        let result =  sql.rows;
+        await conn.close();
+        return result;
+    },
+
+    findOneMenu: async(mnNo) => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select * from menu where mn_no=${mnNo}`, binds, options);
+        let result =  sql.rows;
+        await conn.close();
+        return result;
+    },
+
+    findOptions: async(mnNo) => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select mn_no, options.*
+        from menu, options, menu_option
+        where mn_no=mo_menu_no
+        and op_no=mo_option_no
+        and mn_no=${mnNo}`, binds, options);
+        let result =  sql.rows;
+        await conn.close();
+        return result;
+    },
+
+    findAllergy: async(mnNo) => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select mn_no, allergy.*, am_grade
+        from menu, allergy, allergy_menu
+        where a_no=am_allergy_no
+        and mn_no=am_menu_no
+        and mn_no=${mnNo}`, binds, options);
+        let result =  sql.rows;
+        await conn.close();
+        return result;
     }
 }
 

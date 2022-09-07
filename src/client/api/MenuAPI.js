@@ -25,6 +25,23 @@ const API = {
             console.log(e);
         }
     },
+    findAllMenu: async() => {
+        try {
+            const res = await defaultInstance.get(`/menu/all`);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
+    },
+    findOneMenu: async(mnNo) => {
+        try {
+            const res = await defaultInstance.get(`/menu?mn=${mnNo}`);
+            console.log(res);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
+    }
 };
 
 export default API;
