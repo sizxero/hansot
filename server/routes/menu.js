@@ -7,5 +7,11 @@ router.get('/categories', async (req, res) => {
     res.send(result);
 });
 
+router.get('/categories/main', async (req, res) => {
+    let result = await MenuDAO.findMainCategories();
+    res.send(result);
+});
+
+
 
 module.exports = router;
