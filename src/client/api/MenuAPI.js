@@ -4,7 +4,6 @@ const API = {
     findAllCategories: async() => {
         try {
             const res = await defaultInstance.get('/menu/categories');
-            console.log(res);
             return res.data;
         } catch(e) {
             console.log(e);
@@ -13,7 +12,14 @@ const API = {
     findMainCategories: async() => {
         try {
             const res = await defaultInstance.get('/menu/categories/main');
-            console.log(res);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
+    },
+    findCtgMenu: async(ctgNo) => {
+        try {
+            const res = await defaultInstance.get(`/menu/subctg?ctg=${ctgNo}`);
             return res.data;
         } catch(e) {
             console.log(e);

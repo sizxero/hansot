@@ -12,6 +12,12 @@ router.get('/categories/main', async (req, res) => {
     res.send(result);
 });
 
+router.get('/subctg', async(req, res) => {
+    let result = await MenuDAO.findCtgMenu(req.query.ctg);
+    console.log(result);
+    res.send(result);
+})
+
 
 
 module.exports = router;

@@ -35,6 +35,19 @@ const DAO = {
         await conn.close();
         return result;
     },
+
+    findCtgMenu: async(ctgNo) => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select * from menu where mn_subcategory_no=${ctgNo}`, binds, options);
+        let result =  sql.rows;
+        await conn.close();
+        return result;
+    }
 }
 
 module.exports = DAO;

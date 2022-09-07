@@ -3,6 +3,7 @@ import * as Action from '../actions/MenuAction';
 const initialState = {
     categories: null,
     mainCategories: null,
+    ctgMenu: null
 };
 
 const reducers = (state=initialState, action) => {
@@ -19,6 +20,12 @@ const reducers = (state=initialState, action) => {
             return {
                 ...state,
                 mainCategories: action.ctg
+            }
+        }
+        case Action.DISPATCH_CTG_MENU: {
+            return {
+                ...state,
+                ctgMenu: action.ctgMenu
             }
         }
         default : {
