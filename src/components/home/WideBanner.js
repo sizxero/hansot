@@ -3,20 +3,22 @@ import { TextBanner } from '.';
 
 const WideBanner = (props) => {
     return (
-        <div className="WideBanner">
-            <Container>
-                <Row>
-                    <Col sm={12} md={4}>
-                        <TextBanner
-                        style={props.style}
-                        title={props.title}
-                        content={props.content}
-                        type={props.type} 
-                        linktitle={props.linktitle}/>
-                    </Col> 
-                </Row>
-            </Container>
-        </div>
+        <>
+        <div className="WideBanner"></div>
+        <Container>
+            <Row>
+                <Col sm={12} md={4}>
+                <TextBanner
+                    style={props.style}
+                    title={props.title}
+                    content={props.content}
+                    type={props.type} 
+                    linktitle={props.linktitle}/>
+                </Col>
+            </Row>
+        </Container>
+        </>
+        
     );
 }
 

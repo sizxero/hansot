@@ -104,7 +104,7 @@ footer.Footer p {
 
 .WideBannerWrapper {
     height: 600px;
-    position: relatice;
+    position: relative;
     overflow: hidden;
 }
 
@@ -124,14 +124,23 @@ div.WideBanner {
     transform: scale(1.05);
 }
 
-.WideBanner .TextBanner {
-    height: 100%;
-    left:0;
-    top: 0;
-    margin:0 auto;
-    overflow: hidden;
+.WideBannerWrapper .container {
+    position: relative;
     z-index: 5;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+    margin: 0 auto;
     pointer-events: none;
+}
+
+.WideBannerWrapper .row {
+    margin-top: 0;
+}
+.WideBannerWrapper .TextBanner {
+    height: 600px;
+    pointer-events: auto;
 }
 
 div.PictureBanner {

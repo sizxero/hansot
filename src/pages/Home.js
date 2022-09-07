@@ -63,7 +63,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-            <Row className="WideBannerWrapper">
+            <div className="WideBannerWrapper">
                     <WideBanner
                     style={{'backgroundColor': 'black', 'color': 'white', 'opacity': '0.8'}}
                     title="든든한 솥밥을 위해 한솥이 지키고, 키워가는 것들"
@@ -72,7 +72,7 @@ const Home = () => {
                     리드하는 글로벌 종합외식기업 입니다." 
                     type="button"
                     linktitle="브랜드 철학"/>
-            </Row>
+            </div>
             <PictureBanner
             style={{'backgroundColor': 'lightgray'}}
             title="식재료 앞에서는 한없이 까탈스럽습니다"
