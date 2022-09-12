@@ -1,45 +1,43 @@
-import { Container, Row, Col, Collapse } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { MenuCard } from ".";
-import MenuAPI from "../../client/api/MenuAPI";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from 'react';
-import * as Action from "../../redux/actions/MenuAction";
+import { useSelector } from "react-redux";
 
 const MenuCards = (props) => {
     const id = props.id;
-    let dispatch = useDispatch();
     let state = useSelector((state) => state.menuReducer);
-
-    const getMenu = async() => {
-        if(id === null || id === '' || id === undefined)
-            dispatch(Action.dispatchCtgMenu(null));
-        else
-            dispatch(Action.dispatchCtgMenu(await MenuAPI.findCtgMenu(id).then(x=> x)));
-    }
-    
-      useEffect(() => {
-        getMenu();
-      }, [state.ctgMenu]);
 
     return (
         <Container>
-        <Row className="MenuCard">
-            { state.ctgMenu !== null ?
-            <>
-            {state.ctgMenu.map((menu, idx) => 
-                <Col md={4} sm={6}>
-                <MenuCard
-                no={menu.MN_NO}
-                img={menu.MN_IMG}
-                title={menu.MN_NAME}
-                price={menu.MN_PRICE}
-                />
-                </Col>
-            )}
-            </>
-            : <></>
-            }
-        </Row>
+            <Row className="MenuCardsInfo">
+                { state.categories != null ?
+                    <>
+                    <h4>{state.categories[id-1].C_TITLE}</h4>
+                    <h2>{state.categories[id-1].S_TITLE}</h2>
+                    </>
+                    : <></>
+                }
+            </Row>
+            <Row className="MenuCard">
+                    { state.allMenu !== null ?
+                    <>
+                    {state.allMenu.map((menu, idx) => 
+                        menu.MN_SUBCATEGORY_NO === Number(id) ?
+                        <>
+                    <Col md={4} sm={6}>
+                            <MenuCard
+                            no={menu.MN_NO}
+                            img={menu.MN_IMG}
+                            title={menu.MN_NAME}
+                            price={menu.MN_PRICE}
+                            />
+                    </Col>
+                        </>
+                        : <></>
+                        )}
+                    </>
+                    : <></>
+                    }
+            </Row>
         </Container>
     );
 }

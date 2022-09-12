@@ -1,5 +1,5 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import { MenuNav, MenuCards } from "../components/menu";
+import { MenuNav, MenuCards, TotalMenu } from "../components/menu";
 import queryString from 'query-string';
 import MenuAPI from "../client/api/MenuAPI";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,7 +29,15 @@ const Menu = () => {
                     <Col md={8}>
                         {query.ctg === '' || query.ctg === null || query.ctg === undefined ? 
                             <>
-                            전체
+                                <MenuCards id={1}/>
+                                <MenuCards id={2}/>
+                                <MenuCards id={3}/>
+                                <MenuCards id={4}/>
+                                <MenuCards id={5}/>
+                                <MenuCards id={6}/>
+                                <MenuCards id={7}/>
+                                <MenuCards id={8}/>
+                                <MenuCards id={9}/>
                             </>
                         :
                         <MenuCards id={query.ctg}/>
