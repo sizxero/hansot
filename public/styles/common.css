@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -10,8 +15,12 @@ a:hover {
 
 ul li {
     list-style-type: none;
-    display: inline;
     margin: 0 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 span.blind {
@@ -28,24 +37,55 @@ span.blind {
 }
 
 .NavBar {
-    padding: 30px;
+    padding: 15px;
 }
 
 #NavBarNav {
     justify-content: right;
+    color:black;
+	line-height: 50px; 
+	margin:0 auto;
+	text-align: center;
+}
+
+#NavBarNav > ul > li {
+    float:left;
+    width:150px;
+    position:relative;
+}
+
+#NavBarNav > ul > li > ul {
+    width:150px;
+    height: 350px;
+    display:none;
+    position: absolute;
+    font-size:14px;
+    background: lightgray;
+    opacity: 0.8;
+    margin-top:15px;
+}
+
+.NavBarNav1 li {
+    height: 50px;
+    margin: 0;
+    white-space : nowrap;
+    word-wrap : break-word;
 }
 
 .NavBarNav1 a {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     height: 100%;
-    margin: 0 20px;
 }
 
 .NavBarNav1 a:hover {
     color: #f2c000;
-    border-bottom: 3px solid #f2c000;
 }
+
+.NavBarNav1 a:hover + ul {
+    border-top: 3px solid #f2c000;
+}
+
 
 div.subnavWrapper {
     text-align: end;
@@ -91,6 +131,11 @@ footer.Footer .mark_webaward {
 footer.Footer p {
     margin: 5px 0;
 }
+
+.subnavWrapper ul li, footer.Footer ul li {
+    display: inline;
+}
+
 
 /* Home */
 .AdCarousel img {
