@@ -33,6 +33,8 @@
         ㄴ components
             ㄴ common
             ㄴ home
+            ㄴ menu
+            ㄴ store
         ㄴ pages
         ㄴ redux
             ㄴ actions
