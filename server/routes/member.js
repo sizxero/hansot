@@ -20,4 +20,8 @@ router.post('/login', async(req, res) => {
     res.send({login: result});
 });
 
+router.get('/info', async(req, res) => {
+    let result = await MemberDAO.getInfo(req.query.id);
+    res.send(result);
+})
 module.exports = router;

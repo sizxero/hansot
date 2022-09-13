@@ -7,4 +7,14 @@ router.post('/', async(req, res) => {
     res.send(result);
 })
 
+router.get('/history', async(req, res) => {
+    let result = await OrderDAO.findOrderHistory(req.query.id);
+    res.send(result);
+})
+
+router.get('/option', async(req, res) => {
+    let result = await OrderDAO.findOrderOption(req.query.id);
+    res.send(result);
+})
+
 module.exports = router;

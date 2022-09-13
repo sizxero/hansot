@@ -41,6 +41,14 @@ const API = {
         } catch(e) {
             console.log(e);
         }
+    },
+    findMemberInfo: async(id) => {
+        try {
+            const res = await defaultInstance.get(`/member/info?id=${id}`);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
     }
 };
 

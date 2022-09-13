@@ -315,7 +315,7 @@ div.loginInputArea {
     padding: 0;
 }
 
-div.Signup .row, div.Menu .row.thumb, div.MenuDetailWapper, div.SearchStore .row {
+div.Signup .row, div.Menu .row.thumb, div.MenuDetailWapper, div.SearchStore .row, div.MyPage .row {
     background-color: white;
 }
 

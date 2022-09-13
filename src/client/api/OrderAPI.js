@@ -9,6 +9,22 @@ const API = {
             console.log(e);
         }
     },
+    findOrderHistory: async(id) => {
+        try {
+            const res = await defaultInstance.get(`/order/history?id=${id}`);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
+    },
+    findOrderOption: async(id) => {
+        try {
+            const res = await defaultInstance.get(`/order/option?id=${id}`);
+            return res.data;
+        } catch(e) {
+            console.log(e);
+        }
+    }
 };
 
 export default API;

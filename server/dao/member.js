@@ -46,6 +46,18 @@ const DAO = {
         let result =  sql.rows[0]['COUNT(*)'];
         await conn.close();
         return result === 1;
+    },
+    getInfo: async(id) => {
+        let conn = await oracledb.getConnection(dbConfig);
+        let binds = {};
+        let options =  {
+            outFormat: oracledb.OUT_FORMAT_OBJECT
+        };
+        
+        let sql = await conn.execute(`select * from members where mb_id='${id}'`, binds, options);
+        let result =  sql.rows[0];
+        await conn.close();
+        return result;
     }
 }
 
