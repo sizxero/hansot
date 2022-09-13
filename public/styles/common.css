@@ -319,6 +319,15 @@ div.Signup .row, div.Menu .row.thumb, div.MenuDetailWapper {
     background-color: white;
 }
 
+div.Signup .msg {
+    border: 1px solid black;
+    height: 200px;
+    overflow: auto;
+}
+
+div.Signup1 {
+    display: flex;
+}
 table {
     width: 700px;
     text-align: center;

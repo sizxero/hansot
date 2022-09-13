@@ -31,6 +31,7 @@ const SignupStep2 = () => {
                 <Row>
                     <Col sm md id="signup-section">
                         <h1>회원가입</h1>
+                        <h2>02 정보입력</h2>
                         <table>
                             <tr>
                                 <th>아이디</th>
