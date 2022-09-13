@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+span.blind {
+    display: none;
+}
+
+.Header {
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, 0%);
+    padding-top: 5px;
+}
+
+.NavBar {
+    padding: 15px;
+}
+
+#NavBarNav {
+    justify-content: right;
+    color:black;
+	line-height: 50px; 
+	margin:0 auto;
+	text-align: center;
+}
+
+#NavBarNav > ul > li {
+    float:left;
+    width:150px;
+    position:relative;
+}
+
+#NavBarNav > ul > li > ul {
+    width:150px;
+    height: 350px;
+    display:none;
+    position: absolute;
+    font-size:14px;
+    background: lightgray;
+    opacity: 0.8;
+    margin-top:15px;
+}
+
+.NavBarNav1 li {
+    height: 50px;
+    margin: 0;
+    white-space : nowrap;
+    word-wrap : break-word;
+}
+
+.NavBarNav1 a {
+    font-size: 16px;
+    font-weight: bold;
+    height: 100%;
+}
+
+.NavBarNav1 a:hover {
+    color: #f2c000;
+}
+
+.NavBarNav1 a:hover + ul {
+    border-top: 3px solid #f2c000;
+}
+
+
+div.subnavWrapper {
+    text-align: end;
+}
+
+
+div.subnavWrapper li.snsInsta {
+    display: inline-block;
+    background: url(../images/sns-icon.png) left top no-repeat;
+    width: 14px;
+    height: 14px;
+    background-size: 56px 14px;
+}
+
+div.subnavWrapper li.snsFace {
+    display: inline-block;
+    background: url(../images/sns-icon.png) left top no-repeat;
+    background-position: -14px 0;
+    width: 14px;
+    height: 14px;
+    background-size: 56px 14px;
+}
+
+
+footer.Footer {
+    background-color: #f2c000;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+}
+
+footer.Footer .mark_webaward {
+    content: '';
+    display: inline-block;
+    box-sizing: border-box;
+    width: 174px;
+    height: 60px;
+    background: url(../images/webaward.png) left top no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+}
+
+footer.Footer p {
+    margin: 5px 0;
+}
+
+.subnavWrapper ul li, footer.Footer ul li {
+    display: inline;
+}
+
+
+/* Home */
+.AdCarousel img {
+    height: 700px;
+}
+
+.row {
+    /* height: 600px; */
+    margin: 30px 0;
+}
+
+.WideBannerWrapper {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.WideBanner {
+    background-image: url(https://www.hsd.co.kr/assets/images/main/main_visual_02.jpg);
+    z-index: 3;
+    position: absolute;
+    transition: transform 1.5s ease;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.WideBanner.on{
+    transform: scale(1.05);
+}
+
+.WideBannerWrapper .container {
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+.WideBannerWrapper .row {
+    margin-top: 0;
+}
+
+.WideBannerWrapper .TextBanner {
+    height: 600px;
+    pointer-events: auto;
+}
+
+.Banners .row .card{
+    height: 100%;
+    border-radius: 0;
+}
+
+.WideBanner .row {
+    margin: 0;
+}
+
+div.middleLine {
+    background-color: black;
+    width: 10%;
+    height: 5px;
+    margin-top: 50px; 
+}
+
+div.middleLine.white {
+    background-color: white;
+}
+
+div.bottomLine {
+    background-color: black;
+    width: 100%;
+    height: 5px;
+}
+
+div.contentWrapper {
+    padding: 20px;
+}
+
+div.contentWrapper h2 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+div.contentWrapper p {
+    font-size: 18px;
+    padding: 30px 0;
+}
+
+.sc_txt::before {
+    content: '';
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/link-btn.png) left top no-repeat;
+    background-size: 40px 20px;
+    transition-duration: 0.2s;
+}
+
+a.custombutton {
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+a.custombutton:hover {
+    background-color: white;
+    color: black;
+}
+
+.PictureBanner {
+    display: flex;
+    justify-content: center;
+}
+
+a.LinkBanner:hover div.bottomLine,
+a.PictureBanner:hover div.bottomLine {
+    background-color: #f2c000;
+}
+
+a.LinkBanner:hover span.sc_txt::before,
+a.PictureBanner:hover span.sc_txt::before {
+    background-position: -20px 0;
+}
+
+a.LinkBanner:hover span.sc_txt, a.PictureBanner:hover span.sc_txt
+, a.PictureBanner:hover p{
+    font-weight: normal;
+}
+
+.PictureBannerWrapper {
+    margin: 0;
+}
+
+.BannerPicture {
+    height: 100%;
+}
+
+.BannerText .TextBanner {
+    height: 100%;
+}
+
+.TextBanner {
+    height: 100%;
+}
+/* 로그인 페이지 */
+div.Login, div.Signup, div.Menu, div.MenuDetail, div.MyPage, div.SearchStore {
+    width: 100%;
+    padding: 250px 0 100px 0;
+    height: 100%;
+    background-color: lightgray;
+}
+
+div.Login .row div.col-sm {
+    background-color: white;
+    padding: 30px;
+}
+
+div.loginWrapper {
+    display: flex;
+}
+
+div.loginInputArea {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+div.Signup .row, div.Menu .row.thumb, div.MenuDetailWapper, div.SearchStore .row, div.MyPage .row {
+    background-color: white;
+}
+
+div.Signup .msg {
+    border: 1px solid black;
+    height: 200px;
+    overflow: auto;
+}
+
+div.Signup1 {
+    display: flex;
+}
+table {
+    width: 700px;
+    text-align: center;
+}
+input {
+    margin: 5px 0;
+}
+tr input[type=text], [type=password], [type=file] {
+    height: 40px;
+    width: 300px;
+}
+input[type=submit] {
+    width: 350px;
+}
+tr > td:nth-child(2) > input{
+    width: 100%;
+}
+tr > td:nth-child(3){
+    text-align: left;
+}
+
+/* 메뉴 */
+div.Menu div.thumb {
+    height: 105px;
+}
+
+div.Menu div.col-md-4, div.Menu div.col-md-8 {
+    background-color: lightgray;
+}
+
+div.MenuCards .MenuCardsInfo{
+    background-color: none;
+}
+/* 메뉴디테일 */

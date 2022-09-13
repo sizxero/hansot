@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/hansot/static/js/main.cf55d12f.js",
+    "index.html": "/hansot/index.html",
+    "main.cf55d12f.js.map": "/hansot/static/js/main.cf55d12f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.cf55d12f.js"
+  ]
+}
