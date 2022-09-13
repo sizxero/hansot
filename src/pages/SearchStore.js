@@ -1,27 +1,54 @@
+/* global kakao */
 import { Container, Row, Col } from 'react-bootstrap';
+import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { SearchOptions } from '../components/store';
+import StoreAPI from "../client/api/StoreAPI";
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
+import * as Action from "../redux/actions/StoreAction";
 
 const SearchStore = () => {
+    let dispatch = useDispatch();
+    let state = useSelector((state) => state.storeReducer);
+    let [markers, setMarkers] = useState([]);
+    const getInitData = async() => {
+        dispatch(Action.dispatchAllStore(await StoreAPI.findAllStore().then(x=> {
+            var arr = [];
+            x.map(xx => addressToCoord(xx.ST_ADDR).then(xxx=> arr.push(xxx)));
+            setMarkers(arr);
+        })));
+    }
+    
+    const addressToCoord = async (addr) => {
+        var geocoder = new kakao.maps.services.Geocoder();
+        return new Promise(resolve => {
+            geocoder.addressSearch(addr, function (result, status) {
+                // 정상적으로 검색이 완료됐으면 
+                 if (status === kakao.maps.services.Status.OK) {
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                    resolve(coords);
+                }
+            });
+        })
+    }
+    
+    useEffect(() => {
+        getInitData();
+    }, []);
+    
     return (
         <div className="SearchStore">
             <Container>
                 <Row>
-                    <Col sm md id="login-section">
-                        <h1>로그인</h1>
-                        <form action="" method="post" className="loginForm">
-                            <div className="loginWrapper">
-                                <div className="loginInputArea">
-                                    <input type="text" placeholder="ID"/>
-                                    <input type="password" placeholder="PW"/>
-                                </div>
-                                <input type="button" 
-                                className="btn btn-warning" value="로그인"/>
-                            </div>
-                        </form>
-                    </Col>
-                    <Col sm md={{'span':5, 'offset': 1}} id="signup-banner">
-                        <img src="https://www.hsd.co.kr/assets/images/login/join_temp_01.jpg" alt="" />
-                        <h2>한솥 회원이 아니신가요?</h2>
-                        <a href="/signup" class="btn btn-warning">회원가입</a>
+                    <Col sm md id="search-section">
+                        <h1>주변점포찾기</h1>
+                        <SearchOptions />
+                        <Map
+                        level={13}
+                        center={{ lat: 35.85133, lng: 127.734086 }}
+                        style={{ width: "100%", height: "500px" }}>
+                            {markers.map(m => <MapMarker position={{lat: m.Ma, lng: m.La}}/>)}
+                        </Map>
                     </Col>
                 </Row>
             </Container>
