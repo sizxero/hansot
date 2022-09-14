@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hansot/static/js/main.cf55d12f.js",
+    "main.js": "/hansot/static/js/main.d00c9434.js",
     "index.html": "/hansot/index.html",
-    "main.cf55d12f.js.map": "/hansot/static/js/main.cf55d12f.js.map"
+    "main.d00c9434.js.map": "/hansot/static/js/main.d00c9434.js.map"
   },
   "entrypoints": [
-    "static/js/main.cf55d12f.js"
+    "static/js/main.d00c9434.js"
   ]
 }
