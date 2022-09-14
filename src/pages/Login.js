@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import * as Action from "../redux/actions/MemberAction";
 import MemberAPI from "../client/api/MemberAPI";
@@ -33,7 +34,7 @@ const Login = () => {
                     <Col sm md={{'span':5, 'offset': 1}} id="signup-banner">
                         <img src="https://www.hsd.co.kr/assets/images/login/join_temp_01.jpg" alt="" />
                         <h2>한솥 회원이 아니신가요?</h2>
-                        <a href="/signup" class="btn btn-warning">회원가입</a>
+                        <Link to="/signup" class="btn btn-warning">회원가입</Link>
                     </Col>
                 </Row>
             </Container>

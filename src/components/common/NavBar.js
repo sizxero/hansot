@@ -1,4 +1,5 @@
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const NavBar = () => {
@@ -22,13 +23,15 @@ const NavBar = () => {
     return (
         <>
             <Navbar bg="light" expand="lg" className="NavBar">
-                <Navbar.Brand href="/">
+                <Link to="/">
+                <Navbar.Brand>
                 <img
                 src="https://www.hsd.co.kr/assets/images/common/h1_logo.png"
                 className="d-inline-block align-top"
-                alt="React Bootstrap logo"
+                alt="Hansot logo"
                 />
                 </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="NavBarNav" />
                 <Navbar.Collapse id="NavBarNav">                    
                 <ul className="NavBarNav1">
